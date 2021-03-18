@@ -1,0 +1,3 @@
+server/node_modules/
+client/src/visualComponents/GlobalCssButton.css
+client/src/visualComponents/GlobalCssButton.js
