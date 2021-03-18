@@ -1,6 +1,3 @@
-# exam3: "scheduling"
-## Student: s279335 ABD EL RAHMAN RUSLAN 
-
 ## React client application routes
 
 - Route `/login`: login page with 2 Textfields , and a Switch to switch between teacher and student 
@@ -69,7 +66,6 @@ teachers contains the teacher login password and course that he teachs
 ## Main React Components
 
 
-
   CreateExamView this is used only buy the teacher, i use a stepper to show progress in doing so first the teacher is premoted with entering an exam name i put random function to genarte names, if the selection it premotes him to select students form a list the same component is used but with a diffreant mode that shows the names and student numbers with addition to checkbox clicking on it, then the teacher selects duration and finally defines sessions, using an dialog, i also added the option to edit and delete, then when there is enough slots he can see an over view with the options to save.
   
   ExamDetailView i used a GridList to make cells the number of session depends on teacher has another cell of list of all students
@@ -80,9 +76,6 @@ in each cell i created a listview cards in the list view related to this routes 
 SessionCardView show a dialog when the teacher defines sessions allows him to edit a session as well or cancel  
 (only _main_ components, minor ones may be skipped)
 
-## Screenshot
-
-![Configurator Screenshot](./img/screenshot.jpg)
 
 ## Test users
 
