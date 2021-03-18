@@ -7,7 +7,10 @@ const TeacherExamsView = require('./TeacherExamsView');
 const myDAO = require('./myDAO');
 const UserDao = require('./UserLoginDao');
 
-const jwtSecret = 'ytsT2aBDLVivIvTqqKN6NoIzNePrFF9GfDdgnyVkMgWOEk21KSvmLbNkPG8TR689';
+//todo use your key here!!!
+const mykey = require('./key');
+
+const jwtSecret = mykey;
 const expireTime = 600;
 
 const PORT = 3001;
@@ -41,7 +44,6 @@ app.post(BASEURI+'/teacher-login', (req, res) => {
                     });
                 } else {
                     //AUTHENTICATION SUCCESS
-                    console.log("asdsadasdasdasd22222222");
                     const token = jsonwebtoken.sign({ username: teacher.username,course:teacher.cid,mode:0}, jwtSecret, {expiresIn: expireTime});
                     res.cookie('token', token, { httpOnly: true, sameSite: true, maxAge: 1000*expireTime });
                     res.json({username: teacher.username, course:teacher.cid,mode:0});
